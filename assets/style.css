@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1f1f1;
+}
+header{
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.navbar{
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar__avatar img{
+    width: 55px;
+    height: 55px;
+}
+.navbar__search{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 8px;
+    border: 1px solid rgb(221, 221, 227);
+    max-width: 500px;
+    width: 100%;
+}
+.navbar__search img{
+    width: 24px;
+    height: 24px;
+}
+.navbar__search input{
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    max-width: 350px;
+    width: 100%;
+}
+.navbar__search button{
+    color: rgb(128, 128, 137);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    width: 96px;
+    height: 38px;
+    position: relative;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.navbar__search button::before{
+    content: "";
+    position: absolute;
+    border-left: 1px solid rgb(221, 221, 227);
+    left: 0;
+    top: 8px;
+    height: 24px;
+}
+.navbar__search button:hover{
+    background-color: rgba(128, 128, 137, 0.195);
+}
+.navbar__user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: rgb(128, 128, 137);
+}
+.navbar__user:hover{
+    background-color: rgba(128, 128, 137, 0.195);
+}
+.navbar__user img{
+    width: 24px;
+    height: 24px;
+}
+.container{
+    max-width: 1024px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #cfcfcf;  
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.gameplay{
+    position: relative;
+    background-image: url('https://wallpapercave.com/wp/wp6956942.png');
+    max-width: 800px;
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+}
+#gameplay{
+    position: absolute;
+}
+#restartBtn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 20px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border: none;
+    display: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.control{
+    background-color: #dedede;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+}
+.control__text{
+    font-size: 12px;
+    font-weight: bold;
+    color: #747474;
+}
+.control__items{
+    margin-top: 14px;
+    margin-left: 2rem;
+    display: flex;
+    gap: 5rem;
+}
+.control__item{
+    padding: 5px 15px;
+    font-size: 12px;    
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: default;
+    border: 1px solid #959595;
+}
+.snow{
+    position: absolute;
+    border-radius: 45%;
+    background-color: #fff;
+    animation: animationSnow ease-in-out infinite;
+}
+@keyframes animationSnow {
+    0%{
+        opacity: 0;
+        transform: translate(600px, 0);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-200px, 0);
+        opacity: 0;
+    }
+}

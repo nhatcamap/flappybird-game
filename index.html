@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/016/419/709/original/bird-icon-free-vector.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar__avatar">
+                <img src="https://static.vecteezy.com/system/resources/previews/016/419/709/original/bird-icon-free-vector.jpg" alt="avatar">
+            </div>
+            <div class="navbar__search">
+                <img src="https://salt.tikicdn.com/ts/upload/33/d0/37/6fef2e788f00a16dc7d5a1dfc5d0e97a.png" alt="">
+                <input type="text" placeholder="Search game">
+                <button>Search</button>
+            </div>
+            <div class="navbar__user">
+                <img src="https://salt.tikicdn.com/ts/upload/07/d5/94/d7b6a3bd7d57d37ef6e437aa0de4821b.png" alt="">
+                <span class="user">Account</span>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="gameplay">
+            <canvas id="gameplay"></canvas>
+            <button id="restartBtn">Restart</button>
+        </div>
+        <div class="control">
+            <p class="control__text">GAME CONTROLS</p>
+            <div class="control__items">
+                <button disabled class="control__item"><i class="fa-solid fa-computer-mouse"></i></button>
+                <button disabled class="control__item">SPACE</button>
+                <button disabled class="control__item"><i class="fa-solid fa-arrow-up"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JS -->
+     <script src="src/app.js"></script>
+     <script>
+        flappyBirdGame({
+            gameContainer: '.gameplay',
+            canvasId: '#gameplay',
+            restartBtn: '#restartBtn'
+        });
+     </script>
+</body>
+</html>
